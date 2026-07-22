@@ -1,0 +1,111 @@
+body{
+    background:#0f172a;
+    color:blue;
+    text-align:center;
+    font-family:Arial;
+}
+
+button{
+    background:#00ff88;
+    color:black;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+}<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kii Store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>Kii Store</h1>
+<p>Aman • Murah • Terpercaya</p>
+</div>
+
+</header>
+
+<section class="banner">
+
+<h2>TOP UP GAME TERMURAH</h2>
+
+<p>Proses Cepat • Aman • 24 Jam</p>
+
+<a href="#game">
+<button>Top Up Sekarang</button>
+</a>
+
+</section>
+
+<section id="game">
+
+<h2>🎮 Pilih Game</h2>
+
+<div class="card">
+
+<h3>🔥 Free Fire</h3>
+
+<p>Diamond Murah</p>
+
+<button>Beli</button>
+
+</div>
+
+<div class="card">
+
+<h3>⚔️ Mobile Legends</h3>
+
+<p>Diamond & Weekly Pass</p>
+
+<button>Beli</button>
+
+</div>
+
+<div class="card">
+
+<h3>🏆 PUBG Mobile</h3>
+
+<p>UC Murah</p>
+
+<button>Beli</button>
+
+</div>
+
+<div class="card">
+
+<h3>🎯 Honor of Kings</h3>
+
+<p>Token Murah</p>
+
+<button>Beli</button>
+
+</div>
+
+<div class="card">
+
+<h3>💥 Valorant</h3>
+
+<p>VP Murah</p>
+
+<button>Beli</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>©2026 Kii Store</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

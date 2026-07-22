@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Up - Kii Store</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 id="gameName">Top Up Game</h1>
+
+<input type="text" id="uid" placeholder="Masukkan UID">
+
+<select id="diamond">
+    <option value="5 Diamond - Rp500">5 Diamond - Rp500</option>
+    <option value="12 Diamond - Rp1.000">12 Diamond - Rp1.000</option>
+    <option value="50 Diamond - Rp5.000">50 Diamond - Rp5.000</option>
+    <option value="100 Diamond - Rp10.000">100 Diamond - Rp10.000</option>
+</select>
+
+<select id="payment">
+    <option>DANA</option>
+    <option>QRIS</option>
+    <option>OVO</option>
+    <option>GoPay</option>
+</select>
+
+<h3>Total : <span id="total">5 Diamond - Rp500</span></h3>
+
+<button onclick="checkout()">Checkout</button>
+
+</div>
+
+<script>
+const game = new URLSearchParams(window.location.search).get("game");
+
+if(game){
+    document.getElementById("gameName").innerHTML = "Top Up " + game;
+}
+
+const diamond = document.getElementById("diamond");
+const total = document.getElementById("total");
+
+diamond.onchange = function(){
+    total.innerHTML = diamond.value;
+}
+
+function checkout(){
+
+    let uid = document.getElementById("uid").value;
+
+    if(uid==""){
+        alert("Masukkan UID!");
+        return;
+    }
+
+    let pesan =
+`Halo Admin Kii Store
+
+Game : ${game}
+UID : ${uid}
+Nominal : ${diamond.value}
+Pembayaran : ${document.getElementById("payment").value}`;
+
+    window.open(
+        "https://wa.me/6283199273252?text="+encodeURIComponent(pesan),
+        "_blank"
+    );
+
+}
+</script>
+
+</body>
+</html>
